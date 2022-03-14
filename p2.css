@@ -1,0 +1,196 @@
+/* css reset  */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* css variables */
+:root{
+    --navbar-height: 59px;
+}
+/* Navigaton Bar */
+#navbar {
+    display:flex;
+    align-items:center;
+    position: relative; /*resize the navbar*/
+    top:0px;
+}
+/* Logo and image */
+#logo{
+    margin: 10px 36px;
+}
+#logo img{
+    height: 60px;
+    margin: 5px 6px;
+}
+
+/* List styling */
+#navbar ul{
+    display:flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+/* color the navbar  */
+#navbar::before{ 
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1; /*show the content on the black screen*/
+    opacity: 3.4;
+}
+#navbar ul li{
+    color: rgb(8, 133, 50);
+    list-style: none;
+    font-size: 1.3rem;
+    /* padding: 0px; */
+}
+#navbar ul li a{
+    color: white;
+    list-style: none;
+    display: block;
+    font-size: 1.3rem;
+    padding: 10px 5px;
+    text-decoration: none; /* remove underlines*/
+
+}
+
+/* hover to change the color of the element */
+#navbar ul li a:hover{
+    color: black;
+    background-color: White;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li{
+    color: rgb(10, 141, 56);
+    list-style: none;
+    font-size: 1.3rem;
+    padding: 0px;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 554px;
+}  
+/* set background to our webpage   */
+#home::before{  /*background's underheight*/
+    content: "";
+    background: url(../p2/bg1.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 90%;
+    top: 0px;
+    left: 0px; /*hide the navbar */
+    width: 100%;
+    z-index: -1; /*show the content on the black screen*/
+    opacity: 0.89; /*reduce the opacity of the background image*/
+}
+
+/* Utility class */
+#home h1 {
+    color: white;
+    text-align: center;
+}
+#home p {
+    color: white;
+    text-align: center;
+    font-size:1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+.h-primary{
+    font-size: 3.8rem;
+    padding: 2px;
+    font-family: 'Baloo 2', cursive;
+}
+.h-secondary{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Baloo 2', cursive;
+    align-items: center;
+    /* display: block; */
+    
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color:rgb(218, 12, 12);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius:10px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(207, 97, 97);
+}
+
+/* Services section  */
+#services{
+    margin: 34px;
+    display: flex;
+    
+}
+/* #services.box img{
+    border: 2px solid brown;
+} */
+
+.center{
+    text-align: center;
+    /* border: 2px solid black; */
+}
+#services .box{
+    border: 2px solid rgb(214, 12, 12);
+    padding: 34px;
+    margin: 3px 6px;
+    background-color: rgb(209, 209, 166);
+    
+
+
+    
+}
+#services .box img{
+    height:100px;
+    /* border: 2px solid brown; */
+    margin: auto;
+    display:block;
+    /* background-color: yellow; */
+}
+/* .box{
+    border: 2px solid black;
+    padding: 34px;
+    margin: 3px 6px;
+} */
+
+/* client-section */
+
+#client-section {
+    height: 344px;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img {
+    height: 124px;
+    /* padding: 12px; */
+}
+.client-item{
+    padding: 20px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../bg.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
